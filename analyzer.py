@@ -63,4 +63,20 @@ class Analyzer:
                     sum += 1
         return sum
 
+    def displayDataText(self):
+        print('Average words : ', self.getAverageWords())
+        print('Number of total words : ', self.getNumberWords())
+        print('Number of words from Aimée : ', self.getNbWordsByName("Aimée"))
+        print('Number of words from Thomas : ', self.getNbWordsByName("Thomas"))
+        print('Number of average words in a message from Aimée : ', self.getAverageWordsByName("Aimée"))
+        print('Number of average words in a message from Thomas : ', self.getAverageWordsByName("Thomas"))
+        print('Number of messages from Aimee : ', self.getNbMessageByName("Aimée"))
+        print('Number of messages from Thomas : ', self.getNbMessageByName("Thomas"))
+        print('Number of time ok appeared : ', self.messageContainsString("ok"))
+        #print('Number of time ok appeared from Aimée : ', self.messageContainsStringByName("ok", "Aimée"))
+        #print('Number of time ok appeared from Thomas : ', self.messageContainsStringByName("ok", "Thomas"))
+        #print('Top 200 words Aimée : ', self.wordAnalyserAimee.getTopWords(200))
+        #print('Top 200 words Thomas : ', self.wordAnalyserThomas.getTopWords(200))
+        print('Top 200 words Thomas : ', self.wordAnalyserThomas.getFilteredTopWords(200))
+        print('Top 200 words Aimee : ', self.wordAnalyserAimee.getFilteredTopWords(200))
     
